@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Box, Typography, Paper } from '@mui/material';
-import Keyboard from './Keyboard';
+import Keyboard from './keyboard';
 import { WORDS } from './words';
 
 const WORD_LENGTH = 5;
