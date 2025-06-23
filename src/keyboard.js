@@ -9,15 +9,25 @@ const rows = [
 
 export default function Keyboard({ onKeyPress }) {
   return (
-    <Box mt={2}>
+    <Box mt={4}>
       {rows.map((row, i) => (
         <Box key={i} display="flex" justifyContent="center" mb={1}>
           {row.map(key => (
             <Button
               key={key}
-              variant="contained"
               onClick={() => onKeyPress(key)}
-              sx={{ m: 0.5, minWidth: 40 }}
+              sx={{
+                m: 0.5,
+                minWidth: key.length > 1 ? 60 : 40,
+                backgroundColor: '#818384',
+                color: '#fff',
+                fontWeight: 'bold',
+                fontSize: '0.9rem',
+                '&:hover': {
+                  backgroundColor: '#565758'
+                },
+              }}
+              variant="contained"
             >
               {key}
             </Button>
